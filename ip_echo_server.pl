@@ -15,6 +15,8 @@ app->hook(after_dispatch => sub {
   $c->res->headers->remove('Server');
 });
 
+app->config(hypnotoad => {listen => ['http://*:64444']});
+
 app->start;
 __DATA__
 
